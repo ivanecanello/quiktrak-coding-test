@@ -112,3 +112,33 @@
   transition: opacity 0.3s ease, transform 0.3s ease;
   margin-top: auto;
 }
+
+@media (max-width: 768px) {
+  .catalog-title {
+    font-size: 2rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .catalog-section {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .movies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .movie-info {
+    padding: 1rem;
+  }
+}
