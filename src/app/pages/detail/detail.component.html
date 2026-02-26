@@ -1,0 +1,52 @@
+@if (movie) {
+  <div class="detail-container">
+    <div class="detail-content">
+      <div class="back-btn-container">
+        <a routerLink="/movies" class="back-btn">← Back to Catalog</a>
+      </div>
+      <div class="detail-section">
+        <div class="poster-section">
+          <img
+            [src]="movie.posterUrl"
+            [alt]="movie.title"
+            class="detail-poster"
+          />
+        </div>
+
+        <div class="info-section">
+          <h1 class="movie-title">{{ movie.title }}</h1>
+
+          <div class="meta-info">
+            <div class="meta-item">
+              <span class="meta-label">Release Year:</span>
+              <span class="meta-value">{{ movie.releaseYear }}</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Duration:</span>
+              <span class="meta-value">{{ movie.duration }} min</span>
+            </div>
+          </div>
+
+          <div class="genres-section">
+            <h3 class="section-title">Genre</h3>
+            <div class="genres">
+              <span class="genre-badge">{{ movie.genre }}</span>
+            </div>
+          </div>
+
+          <div class="synopsis-section">
+            <h3 class="section-title">Synopsis</h3>
+            <p class="synopsis">{{ movie.synopsis }}</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+} @else if (movieNotFound) {
+  <div class="not-found">
+    <h2>Movie Not Found</h2>
+    <p>Sorry, the movie you're looking for doesn't exist.</p>
+    <a routerLink="/movies" class="back-btn">← Back to Catalog</a>
+  </div>
+}
