@@ -41,7 +41,7 @@ QuikTrak Movies is a small frontend application that allows users to:
 
 1. **Clone the repository**
    ```bash
-   git clone from <https://github.com/ivanecanello/quiktrak-coding-test.git>
+   git clone https://github.com/ivanecanello/quiktrak-coding-test.git
    cd quiktrak-coding-test
    ```
 
