@@ -2,29 +2,31 @@
   <div class="catalog-container">
     <h2 class="catalog-title">Featured Movies</h2>
 
-    <div class="movies-grid">
+    <ul class="movies-grid">
       @for (movie of movies; track movie.id) {
-        <div class="movie-card">
-          <div class="movie-poster">
-            <img [src]="movie.posterUrl" [alt]="movie.title" class="poster-image" />
-          </div>
-
-          <div class="movie-info">
-            <h3 class="movie-title">{{ movie.title }}</h3>
-            <p class="movie-year">{{ movie.releaseYear }}</p>
-
-            <div class="genre">
-                <span class="genre-tag">{{ movie.genre }}</span>
+        <li>
+          <article class="movie-card">
+            <div class="movie-poster">
+              <img [src]="movie.posterUrl" [alt]="movie.title" class="poster-image" />
             </div>
 
-            <p class="movie-synopsis">{{ movie.synopsis }}</p>
-            <a [routerLink]="['/movies', movie.id]"
-              class="view-details-btn">
-              View Details
-            </a>
-          </div>
-        </div>
+            <div class="movie-info">
+              <h3 class="movie-title">{{ movie.title }}</h3>
+              <p class="movie-year">{{ movie.releaseYear }}</p>
+
+              <div class="genre">
+                <span class="genre-tag">{{ movie.genre }}</span>
+              </div>
+
+              <p class="movie-synopsis">{{ movie.synopsis }}</p>
+              <a [routerLink]="['/movies', movie.id]"
+                 class="view-details-btn">
+                View Details
+              </a>
+            </div>
+          </article>
+        </li>
       }
-    </div>
+    </ul>
   </div>
 </section>

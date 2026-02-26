@@ -1,10 +1,10 @@
 @if (movie) {
   <div class="detail-container">
     <div class="detail-content">
-      <div class="back-btn-container">
+      <nav class="back-btn-container">
         <a routerLink="/movies" class="back-btn">← Back to Catalog</a>
-      </div>
-      <div class="detail-section">
+      </nav>
+      <article class="detail-section">
         <div class="poster-section">
           <img
             [src]="movie.posterUrl"
@@ -13,7 +13,7 @@
           />
         </div>
 
-        <div class="info-section">
+        <section class="info-section">
           <h1 class="movie-title">{{ movie.title }}</h1>
 
           <div class="meta-info">
@@ -27,20 +27,20 @@
             </div>
           </div>
 
-          <div class="genres-section">
+          <section class="genres-section">
             <h3 class="section-title">Genre</h3>
             <div class="genres">
               <span class="genre-badge">{{ movie.genre }}</span>
             </div>
-          </div>
+          </section>
 
-          <div class="synopsis-section">
+          <section class="synopsis-section">
             <h3 class="section-title">Synopsis</h3>
             <p class="synopsis">{{ movie.synopsis }}</p>
-          </div>
+          </section>
 
-        </div>
-      </div>
+        </section>
+      </article>
     </div>
   </div>
 } @else if (movieNotFound) {
