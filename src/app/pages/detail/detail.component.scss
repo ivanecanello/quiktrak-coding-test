@@ -177,3 +177,26 @@
     max-width: 200px;
   }
 }
+
+@media (max-width: 480px) {
+  .detail-container {
+    padding: 1rem;
+  }
+
+  .detail-content {
+    padding: 1rem;
+  }
+
+  .movie-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .back-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

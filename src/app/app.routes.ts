@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-//In here I apply lazy loading, which enhance performance
+//In here I apply lazy loading, which enhance performance in case we were dealing with a big application
 export const routes: Routes = [
   {
     path: '',
